@@ -14,3 +14,8 @@ css 선택자의 문법을 이용해서 객체를 조회할수 도 있다
 document.querySelector('li');
 document.querySelectorAll('li');
 
+Dom tree참조 dom_types.png
+-----
+console.group('befere')  // 로그를 그룹지어준다.
+console.groupEnd();
+
