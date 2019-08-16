@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- 방법1  inline  방식 -->
+<!--
+<html>
+    <body>
+        <input type="button" onclick="alert('hello')" value ="Hello csnam"/>
+    </body>
+</html> 
+-->
+
+<!-- // 태그 만들어 코드 삽입 하는 방법 -->
+
+<html>
+    <body>
+        <input type="button" id="hw" value="java script seperate"/>
+        <script type="text/javascript">
+            var hw = document.getElementById('hw');
+            hw.addEventListener('click',function(){
+                alert('java script seperate method 1');
+            })
+        </script>
+    </body>
+</html>
+
+<!-- //  파일 분리 방법 
+<html>
+    <body>
+        <input type="button" id="hw" value="java script seperate"/>
+        <script type="text/javascript" src="script_btn.js"></script>
+    </body>
+</html> -->
+
