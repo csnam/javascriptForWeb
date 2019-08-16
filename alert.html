@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- <input type="button" value="alert" onclick= "alert('hello');" /> -->
+        <ul>
+            <li>
+                <input type="button" value="alert" onclick= "alertfunc()" />
+            </li>
+            <li>
+                <input type="button" value="confirm" onclick="confirmfunc()" />   
+            </li>
+
+            <li>
+                <input type="button" value="prompt" onclick="promptfunc()" />   
+            </li>
+
+            <li>
+               <input type="button" value= "location" onclick="locationfunc()" />   
+            </li>
+        </ul>
+        
+        <script>
+            function alertfunc(){
+                alert(1);
+            }
+
+            function confirmfunc(){
+                if (confirm('OK ?')){
+                    alert("ok");
+                }else {
+                    alert("cancel");
+                }
+            }
+            function promptfunc(){
+                if (prompt("input (yes or no)?")== "yes"){
+                    alert("ok yes");
+                }
+                else{
+                    alert ("no");
+                }
+            }
+            function locationfunc(){
+                console.log(location.protocol);
+                console.log(location.pathname);
+                console.log(location.host);
+                console.log(location.port);
+                console.log(location.search);
+                console.log(location.hash);
+            }
+        </script>
+    </body>
+</html>
