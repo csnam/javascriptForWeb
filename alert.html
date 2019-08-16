@@ -17,6 +17,9 @@
             <li>
                <input type="button" value= "location" onclick="locationfunc()" />   
             </li>
+            <li>
+                <input type="button" value= "location Move" onclick="locationMovefunc()" />   
+            </li>
         </ul>
         
         <script>
@@ -46,6 +49,9 @@
                 console.log(location.port);
                 console.log(location.search);
                 console.log(location.hash);
+            }
+            function locationMovefunc(){
+                location.href ='http://daum.net';
             }
         </script>
     </body>
