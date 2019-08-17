@@ -37,6 +37,7 @@
     </body>
 </html> -->
 
+<!--  멀티 이벤트 
 <!DOCTYPE html>
 <htMl>
     <style>
@@ -72,6 +73,38 @@
         </script>
 
     </body>
+</htMl> -->
+
+<!DOCTYPE html>
+<htMl>
+    <style>
+     
+    </style>
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+        <input type="text" id="target" />
+        <input type="button" id="remove" value="remove" />
+        <input type="button" id="add" value="add" />
+        <p id="status"></p>
+        <script>
+            
+            var handler = function(e){
+                $('#status').html(e.type+ " "+ Math.random());
+            }
+         
+            $('#target').on('focus',handler).on('blur',handler);
+            // 이벤트 삭제 
+            $('#remove').on('click',function(e){
+                $('#target').off('focus',handler);
+            });
+            $('#add').on('click',function(e){
+                $('#target').on('focus',handler);    
+            });
+
+        </script>
+
+    </body>
 </htMl>
+
 
 
