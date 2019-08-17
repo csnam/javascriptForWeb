@@ -17,9 +17,10 @@
     </body>
 </html> -->
 
-// 늦은 바인딩  $('ul')=>  $('body') 바꾼다.  이미 body는 있기때문에 설치면 selector로 나중에 a,li 에 설치할수 있다.
+<!-- // 늦은 바인딩  $('ul')=>  $('body') 바꾼다.  
+    이미 body는 있기때문에 설치면 selector로 나중에 a,li 에 설치할수 있다. -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
     <body>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
@@ -34,4 +35,43 @@
             <li><a href="#">JavaScript</a></li>
         </ul>
     </body>
-</html>
+</html> -->
+
+<!DOCTYPE html>
+<htMl>
+    <style>
+        /* body{
+           //background-color:black
+           
+        } */
+        
+    </style>
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+        <input type="text" id="target" />
+        <p id="status"></p>
+        <script>
+            
+            var handler = function(e){
+                $('#status').html(e.type);
+            }
+            // 방법3
+            $('#target').on('focus',handler).on('blur',handler);
+            // 방법2
+            // $('#target').on(
+            //     {
+            //         'focus': handler,
+            //         'blur': handler
+            //     }
+            // )
+            // 방법1 
+            // $('#target').on('focus blur', function(e){
+            //     $('#status').html(e.type);
+            // })
+
+        </script>
+
+    </body>
+</htMl>
+
+
